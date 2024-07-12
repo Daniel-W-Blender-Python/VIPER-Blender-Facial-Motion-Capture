@@ -134,12 +134,12 @@ class MessageBox(bpy.types.Operator):
 
 
 class BlenderMocapPanel(bpy.types.Panel):
-    bl_label = "Blender Facial Mocap"
-    bl_category = "Blender Facial Mocap"
-    bl_idname = "Blender Facial Mocap"
+    bl_label = "VIPER Blender Facial Mocap"
+    bl_category = "VIPER Blender Facial Mocap"
+    bl_idname = "VIPER Blender Facial Mocap"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
-    bl_label = "Blender Facial Mocap"
+    bl_label = "VIPER Blender Facial Mocap"
 
     def draw(self, context):
         layout = self.layout
