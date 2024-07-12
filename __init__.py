@@ -40,9 +40,9 @@ class Settings(PropertyGroup):
     
     eyedropper : bpy.props.StringProperty(name = "Armature")
 
-    key_step : bpy.props.IntProperty(name = "Key Step", min = 1, max = 4, default = 2)
+    key_step : bpy.props.IntProperty(name = "Key Step", default = 2, min = 1, max = 4)
 
-    cam_index : bpy.props.IntProperty(name = "Camera Index", min = 0, max = 5, default = 0)
+    cam_index : bpy.props.IntProperty(name = "Camera Index", default = 0, min = 0, max = 5)
     
     mouth : bpy.props.FloatProperty(name = "Mouth", min = 0, max = 1, default = 0.5)
 
