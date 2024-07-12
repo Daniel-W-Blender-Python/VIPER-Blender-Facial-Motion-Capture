@@ -9,6 +9,7 @@ bl_info = {
 }
 
 import bpy
+from . import panel
 
 def register():
     for c in _classes: register_class(c)
