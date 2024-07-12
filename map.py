@@ -9,8 +9,9 @@ def map_face(shapes, ref_dict, influence):
     mytool = scene.settings
     
     armature = scene.objects.get(mytool.eyedropper)
+    key_step = mytool.key_step
     
-    if bpy.data.scenes[0].frame_current % 2 == 0:
+    if bpy.data.scenes[0].frame_current % key_step == 0:
      
         for i in range(len(shapes[0])):
             
