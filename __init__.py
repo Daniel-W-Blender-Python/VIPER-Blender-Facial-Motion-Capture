@@ -154,8 +154,8 @@ class BlenderMocapPanel(bpy.types.Panel):
         
         layout.prop_search(mytool, "eyedropper", context.scene, "objects")
 
-        layout.prop_search(mytool, "key_step")
-        layout.prop_search(mytool, "cam_index")
+        layout.prop(mytool, "key_step")
+        layout.prop(mytool, "cam_index")
         
         row = layout.row()
         row.label(text="Run Motion Capture")
