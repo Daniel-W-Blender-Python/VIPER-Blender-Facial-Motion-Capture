@@ -118,8 +118,13 @@ def run_face(file_path):
                                            num_faces=1)
     detector = vision.FaceLandmarker.create_from_options(options)
 
+    context = bpy.context
+    scene = context.scene  
+    mytool = scene.settings
 
-    if file_path == "None": cap = cv2.VideoCapture(0)
+    cam_index = mytool.cam_index
+
+    if file_path == "None": cap = cv2.VideoCapture(cam_index)
     else: cap = cv2.VideoCapture(file_path)
 
 
