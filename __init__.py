@@ -1,5 +1,5 @@
 bl_info = {
-    "name": "Blender Facial Mocap",
+    "name": "VIPER Blender Facial Mocap",
     "author": "Daniel W",
     "version": (0, 1),
     "blender": (3, 60, 0),
