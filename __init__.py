@@ -66,9 +66,7 @@ class RunOperator_Face(bpy.types.Operator):
     bl_label = "Run Face Operator"
 
     def execute(self, context):
-        if context.scene.settings.body_tracking: run_face("None")
-        else: 
-            run_face("None")
+        run_face("None")
         return {'FINISHED'}
 
     
