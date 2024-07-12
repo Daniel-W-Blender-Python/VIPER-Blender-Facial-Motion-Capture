@@ -180,12 +180,3 @@ class BlenderMocapPanel(bpy.types.Panel):
         context = bpy.context     
         scene = context.scene
         mytool = scene.settings
-
-_classes = [
-    BlenderMocapPanel,
-    RunOperator_Face,
-    RunFileSelector_Face,
-    AddArmature,
-    Settings,
-    MessageBox
-]
