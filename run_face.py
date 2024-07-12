@@ -5,8 +5,6 @@ from mediapipe import solutions
 from mediapipe.framework.formats import landmark_pb2
 import numpy as np
 import mediapipe as mp
-
-
 from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 
@@ -48,6 +46,64 @@ def draw_landmarks_on_image(rgb_image, detection_result):
           .get_default_face_mesh_iris_connections_style())
 
   return annotated_image
+
+
+ref_dict = {
+    "_neutral" : ["None"],
+    "browDownLeft" : [["brow.B.L.002"], ["-y"], 5],
+    "browDownRight" : [["brow.B.R.002"], ["-y"], 5],
+    "browInnerUp" : [["brow.B.R.004", "brow.B.L.004"], ["y"], 5],
+    "browOuterUpLeft" : [["brow.B.L"], ["y"], 5],
+    "browOuterUpRight" : [["brow.B.R"], ["y"], 5],
+    "cheekPuff" : ["None"],
+    "cheekSquintLeft" : [["cheek.T.L.001"], ["y"], 6],
+    "cheekSquintRight" : [["cheek.T.R.001"], ["y"], 6],
+    "eyeBlinkLeft" : [["lid.T.L.002"], ["-y"], 6],
+    "eyeBlinkRight" : [["lid.T.R.002"], ["-y"], 6],
+    "eyeLookDownLeft" : [["eye.L"], ["-y"], 4],
+    "eyeLookDownRight" : [["eye.R"], ["-y"], 4],
+    "eyeLookInLeft" : [["eye.L"], ["-x"], 4],
+    "eyeLookInRight" : [["eye.R"], ["x"], 4],
+    "eyeLookOutLeft" : [["eye.L"], ["x"], 4],
+    "eyeLookOutRight" : [["eye.R"], ["-x"], 4],
+    "eyeLookUpLeft" : [["eye.L"], ["y"], 4],
+    "eyeLookUpRight" : [["eye.R"], ["y"], 4],
+    "eyeSquintLeft" : [["lid.B.L.002"], ["y / 4"], 3],
+    "eyeSquintRight" : [["lid.B.R.002"], ["y / 4"], 3],
+    "eyeWideLeft" : [["lid.T.L.002"], ["y"], 3],
+    "eyeWideRight" : [["lid.T.R.002"], ["y"], 3],
+    "jawForward" : [["jaw_master"], ["y", "-z / 6.64"], 2],
+    "jawLeft" : [["jaw_master"], ["x"], 2],
+    "jawOpen" : [["jaw_master"], ["y", "z"], 2],
+    "jawRight" : [["jaw_master"], ["-x"], 2],
+    "mouthClose" : [["lip.B"], ["y"], 0],
+    "mouthDimpleLeft" : ["None"],
+    "mouthDimpleRight" : ["None"],
+    "mouthFrownLeft" : [["lip_end.L.001"], ["-y"], 1],
+    "mouthFrownRight" : [["lip_end.R.001"], ["-y"], 1],
+    "mouthFunnel" : [["lip_end.R.001", "lip_end.L.001"], ["None"], 0],
+    "mouthLeft" : ["None"],
+    "mouthLowerDownLeft" : [["lip_end.L.001"], ["-y"], 1],
+    "mouthLowerDownRight" : [["lip_end.R.001"], ["-y"], 1],
+    "mouthPressLeft" : ["None"],
+    "mouthPressRight" : ["None"],
+    "mouthPucker" : [["jaw_master_mouth"], ["y / 3"], 0],
+    "mouthRight" : ["None"],
+    "mouthRollLower" : [["lip.B", "lip.B.R.001", "lip.B.L.001"], ["rotation"], ["-x"], 6],
+    "mouthRollUpper" : [["lip.T", "lip.T.R.001", "lip.T.L.001"], ["rotation"], ["x"], 6],
+    "mouthShrugLower" : ["None"],
+    "mouthShrugUpper" : ["None"],
+    "mouthSmileLeft" : [["lip_end.L.001"], ["y"], 1],
+    "mouthSmileRight" : [["lip_end.R.001"], ["y"], 1],
+    "mouthStretchLeft" : ["None"],
+    "mouthStretchRight" : ["None"],
+    "mouthUpperUpLeft" : [["lip_end.L.001"], ["y"], 1],
+    "mouthUpperUpRight" : [["lip_end.R.001"], ["y"], 1],
+    "noseSneerLeft" : [["nose.L.001"], ["y"], 6],
+    "noseSneerRight" : [["nose.R.001"], ["y"], 6]
+    
+    }
+
 
 def run_face(file_path):
     
