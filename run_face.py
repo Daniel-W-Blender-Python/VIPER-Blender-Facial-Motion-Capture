@@ -108,7 +108,7 @@ ref_dict = {
 def run_face(file_path):
     
     # STEP 2: Create an FaceLandmarker object.
-    base_options = python.BaseOptions(model_asset_path=bpy.path.abspath("4.0/python/lib/site-packages/facial_mocap/face_landmarker.task"))
+    base_options = python.BaseOptions(model_asset_path=bpy.path.abspath("./face_landmarker.task"))
     options = vision.FaceLandmarkerOptions(base_options=base_options,
                                            output_face_blendshapes=True,
                                            output_facial_transformation_matrixes=True,
