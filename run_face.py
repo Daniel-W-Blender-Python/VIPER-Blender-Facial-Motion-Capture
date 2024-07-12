@@ -1,5 +1,5 @@
 import bpy
-from .map import map
+from .map import map_face
 import cv2
 from .mediapipe_setup import *
 from mediapipe import solutions
