@@ -7,6 +7,7 @@ import numpy as np
 import mediapipe as mp
 from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
+import os
 
 
 def draw_landmarks_on_image(rgb_image, detection_result):
