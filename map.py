@@ -1,4 +1,4 @@
-from . import get_global
+from .get_global import get_global
 import math
 
 ref_dict = {
