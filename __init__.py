@@ -118,9 +118,17 @@ class AddArmature(bpy.types.Operator):
         scene = bpy.context.scene
         #context = scene.get_context()
         return {'FINISHED'}
+
+
+class InstallDependencies(bpy.types.Operator):
+    """Install Dependencies"""
+    bl_idname = "object.install_dependencies"
+    bl_label = "Install Dependencies"
     
     
-    
+    def execute(self, context):
+        install_dependencies()
+        return {'FINISHED'}    
          
     
 class MessageBox(bpy.types.Operator):
@@ -201,6 +209,12 @@ class BlenderMocapPanel(bpy.types.Panel):
         layout.prop(mytool, "general", slider=True)
 
         row = layout.row()
+        row.label(text="Install Mediapipe and OpenCV")
+
+        row = layout.row()
+        row.operator(InstallDependencies.bl_idname, text="Install Dependencies", icon="IMPORT")
+
+        row = layout.row()
         label = "Body" if settings.body_tracking else "Body, Hands and Face"
         row.prop(settings, 'body_tracking', text=label, toggle=True)
         
@@ -214,6 +228,7 @@ _classes = [
     RunOperator_Face,
     RunFileSelector_Face,
     AddArmature,
+    InstallDependencies,
     Settings,
     MessageBox
 ]
