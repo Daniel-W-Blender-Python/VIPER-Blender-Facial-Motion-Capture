@@ -1,5 +1,5 @@
 import bpy
-from .map import ref_dict, map_face
+from .map import map_face
 import cv2
 from mediapipe import solutions
 from mediapipe.framework.formats import landmark_pb2
