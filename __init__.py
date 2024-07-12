@@ -79,6 +79,7 @@ class RunOperator_Face(bpy.types.Operator):
     bl_label = "Run Face Operator"
 
     def execute(self, context):
+        from .run_face import run_face
         run_face("None")
         return {'FINISHED'}
 
@@ -90,6 +91,7 @@ class RunFileSelector_Face(bpy.types.Operator, ImportHelper):
     filename_ext = ""
 
     def execute(self, context):
+        from .run_face import run_face
         file_name = self.properties.filepath
         run_face(file_name)
         return{'FINISHED'} 
@@ -217,7 +219,6 @@ _classes = [
 ]
 
 def register():
-    from .run_face import run_face
     for c in _classes: register_class(c)
     bpy.types.Scene.settings = bpy.props.PointerProperty(type=Settings)
     
