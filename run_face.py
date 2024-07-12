@@ -1,6 +1,7 @@
 import bpy
 from . import map
 import cv2
+from . import mediapipe_setup
 
 def run_face(file_path):
     
