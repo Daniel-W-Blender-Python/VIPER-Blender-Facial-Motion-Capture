@@ -14,7 +14,6 @@ from bpy.utils import register_class, unregister_class
 from bpy_extras.io_utils import ImportHelper
 import bpy_extras
 import rigify
-from .run_face import run_face
 import subprocess
 import sys
 import os
@@ -218,6 +217,7 @@ _classes = [
 ]
 
 def register():
+    from .run_face import run_face
     for c in _classes: register_class(c)
     bpy.types.Scene.settings = bpy.props.PointerProperty(type=Settings)
     
@@ -228,6 +228,6 @@ def unregister():
     del bpy.types.Scene.settings
 
 
-if __name__ == "__main__":
-    register()    
+if __name__ == "__main__":    
     install_dependencies()
+    register()
