@@ -14,7 +14,7 @@ from bpy.utils import register_class, unregister_class
 from bpy_extras.io_utils import ImportHelper
 import bpy_extras
 import rigify
-from . import run_face
+from .run_face import run_face
 
 def draw_file_opener(self, context):
     layout = self.layout
