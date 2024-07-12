@@ -1,7 +1,13 @@
 import bpy
-from . import map
+from .map import map
 import cv2
 from .mediapipe_setup import *
+from mediapipe import solutions
+from mediapipe.framework.formats import landmark_pb2
+import numpy as np
+import mediapipe as mp
+from mediapipe.tasks import python
+from mediapipe.tasks.python import vision
 
 def run_face(file_path):
     
