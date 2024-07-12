@@ -39,6 +39,8 @@ class Settings(PropertyGroup):
     body_tracking = bpy.props.BoolProperty(default=True)
     
     eyedropper : bpy.props.StringProperty(name = "Armature")
+
+    key_step : bpy.props.IntProperty(name = "Key Step", min = 1, max = 4, default = 2)
     
     mouth : bpy.props.FloatProperty(name = "Mouth", min = 0, max = 1, default = 0.5)
 
@@ -149,6 +151,11 @@ class BlenderMocapPanel(bpy.types.Panel):
         row.label(text="Select an Armature")
         
         layout.prop_search(mytool, "eyedropper", context.scene, "objects")
+
+        row = layout.row()
+        row.label(text="Key Step")
+
+        layout.prop_search(mytool, "key_step")
         
         row = layout.row()
         row.label(text="Run Motion Capture")
