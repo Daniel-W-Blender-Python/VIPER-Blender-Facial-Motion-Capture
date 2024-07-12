@@ -1,5 +1,6 @@
 from .get_global import get_global
 import math
+import bpy
     
 def map_face(shapes, ref_dict, influence):
     
