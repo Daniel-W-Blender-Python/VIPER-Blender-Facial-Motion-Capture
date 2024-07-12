@@ -3,7 +3,7 @@ bl_info = {
     "author": "Daniel W",
     "version": (0, 1),
     "blender": (3, 60, 0),
-    "location": "3D View > Sidebar > Blender Facial Mocap",
+    "location": "3D View > Sidebar > VIPER Blender Facial Mocap",
     "description": "Facial Motion Capture",
     "category": "3D View"
 }
