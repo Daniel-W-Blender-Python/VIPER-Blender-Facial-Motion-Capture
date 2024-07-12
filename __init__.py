@@ -11,6 +11,15 @@ bl_info = {
 import bpy
 from . import panel
 
+_classes = [
+    BlenderMocapPanel,
+    RunOperator_Face,
+    RunFileSelector_Face,
+    AddArmature,
+    Settings,
+    MessageBox
+]
+
 def register():
     for c in _classes: register_class(c)
     bpy.types.Scene.settings = bpy.props.PointerProperty(type=Settings)
