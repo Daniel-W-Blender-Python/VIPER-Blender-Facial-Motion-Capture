@@ -9,8 +9,6 @@ bl_info = {
 }
 
 import bpy
-from . import panel
-import bpy
 from bpy.types import Panel, Operator, PropertyGroup, FloatProperty, PointerProperty, StringProperty
 from bpy.utils import register_class, unregister_class
 from bpy_extras.io_utils import ImportHelper
