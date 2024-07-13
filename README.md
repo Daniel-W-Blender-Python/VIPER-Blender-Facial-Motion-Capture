@@ -5,3 +5,4 @@ A Blender addon that uses Google's Mediapipe Face Landmarker to map facial expre
 https://www.loom.com/share/9b76c306718d48fcbcf54203242fef00
 
 # Installation
+https://www.loom.com/share/949fc1b42b6743f6bddaaebf350a73e9
