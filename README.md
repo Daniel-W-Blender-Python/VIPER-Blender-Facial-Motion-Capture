@@ -18,3 +18,6 @@ https://www.loom.com/share/949fc1b42b6743f6bddaaebf350a73e9
 Any issues with installation should be put in this repository. I will try to address them as soon as possible.
 
 # Future Work
+As mentioned before, VIPER is a computer vision project with the goal of providing fast and accurate motion capture to the Blender Community for free. While convenient, motion capture suits are very expensive, and, unlike code, don't last forever. Over the next year or so, I will be working on a real-time, multiperson 3D pose estimation model to employ in Blender for animators to use at their own convenience.
+
+Until that happens, this addon can be used to efficiently retarget motion capture from Rokoko's free monocular motion capture tool onto the Rigify rig, so that this addon can be easily used with other existing motion capture softwares. (https://github.com/Daniel-W-Blender-Python/Blender-Motion-Capture-Addon/tree/main)
