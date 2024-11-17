@@ -53,7 +53,7 @@ ref_dict = {
     "_neutral" : ["None"],
     "browDownLeft" : [["brow.B.L.002"], ["-y"], 5],
     "browDownRight" : [["brow.B.R.002"], ["-y"], 5],
-#    "browInnerUp" : [["brow.B.R.004", "brow.B.L.004"], ["y"], 5],
+    "browInnerUp" : [["brow.B.R.004", "brow.B.L.004"], ["y"], 5],
     "browOuterUpLeft" : [["brow.B.L"], ["y"], 5],
     "browOuterUpRight" : [["brow.B.R"], ["y"], 5],
     "cheekPuff" : ["None"],
