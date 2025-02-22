@@ -47,8 +47,6 @@ class Settings(PropertyGroup):
     
     file_name : bpy.props.StringProperty(name = "File Path:")
     
-    body_tracking = bpy.props.BoolProperty(default=True)
-    
     eyedropper : bpy.props.StringProperty(name = "Armature")
 
     key_step : bpy.props.IntProperty(name = "Key Step", default = 2, min = 1, max = 4)
@@ -215,10 +213,6 @@ class BlenderMocapPanel(bpy.types.Panel):
 
         row = layout.row()
         row.operator(InstallDependencies.bl_idname, text="Install Dependencies", icon="IMPORT")
-
-        row = layout.row()
-        label = "Body" if settings.body_tracking else "Body, Hands and Face"
-        row.prop(settings, 'body_tracking', text=label, toggle=True)
         
         context = bpy.context     
         scene = context.scene
